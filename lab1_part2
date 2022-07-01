@@ -1,0 +1,10 @@
+%%%%%Part_2
+load('Temperature.mat')
+input2 = Temperature(:,1);
+output2 = Temperature(:,2);
+ 
+scatter(input2,output2,50)
+title('Voltage vs. Temperature')
+xlabel('Temperature (^o F)')
+ylabel('Voltage  e_o (mV)')
+grid on 
