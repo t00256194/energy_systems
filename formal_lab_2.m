@@ -1,5 +1,5 @@
 clear;clc
-load('Formal_Lab_2_Workspace.mat')
+load('formal_lab2_workspace.mat')
 
 
 %% 16.5 mm ID Smooth Tube (D1,Q1,P1,V1,Re1,Le1,f1a,f1b,T1)
@@ -8,11 +8,11 @@ h = raw(:,3).*(10^-3); delta_p = 9.81.*rho.*h;                %%(mm) (Pa)
 
 V1=(4/pi/D1^2).*Q1; Re1=(4*rho/mu/pi/D1).*Q1; 
 
-if Re1 <= 10e7
-    Le1=(D1*4.4).*Re1.^(1/6);
-else
-    disp('Re is too high')
-end
+    if Re1 <= 10e7
+        Le1=(D1*4.4).*Re1.^(1/6);
+    else
+        disp('Re is too high')
+    end
 
 f1a=(delta_p./1)./(0.5.*rho.*(V1.^2)./D1);                    %%friction factor (measured)
 f1b=0.316./(Re1.^0.25);                                       %%friction factor (calculated)
@@ -28,11 +28,11 @@ h2 = raw(:,10).*(10^-3); delta_p2 = 9.81.*rho.*h2;            %%(mm) (Pa)
 
 V2=(4/pi/D2^2).*Q2; Re2=(4*rho/mu/pi/D2).*Q2; 
 
-if Re2 <= 10e7
-    Le2=(D2*4.4).*Re2.^(1/6);
-else
-    disp('Re is too high')
-end
+    if Re2 <= 10e7
+        Le2=(D2*4.4).*Re2.^(1/6);
+    else
+        disp('Re is too high')
+    end
     
 f1a2=(delta_p2./1)./(0.5.*rho.*(V2.^2)./D2);                  %%friction factor (measured) 
 roughness = 3.7*(ep - 6.9./Re2).^(1/1.11);
