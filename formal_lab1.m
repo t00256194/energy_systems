@@ -1,6 +1,6 @@
 clc
 clear all 
-load('Workspace1.mat')
+load('formal_lab1_workspace.mat')
 
 
 %% Graph 1
