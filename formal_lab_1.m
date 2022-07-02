@@ -3,7 +3,7 @@ clear all
 load('Workspace1.mat')
 
 
-%%Graph 1
+%% Graph 1
 figure
 scatter(Temps(:,10),q_hot,30,'r','filled')
 hold on
@@ -17,7 +17,7 @@ ylabel('Heat Transfer Rate, q (W)')
 legend('q_{hot}','q_{cold}','location','northwest')
 
 
-%%Graphs 2
+%% Graphs 2
 figure
 scatter(C_r,NTU,'r^','filled')
 xlim([0.3 1.1])
@@ -29,7 +29,7 @@ xlabel('Capacity Rate Ratio, C_r')
 ylabel('Number of Transfer Units, NTU')                           
 
 
-%%Gragh 3
+%% Gragh 3
 figure
 scatter(C_r,e1,'gs','filled')
 hold on
